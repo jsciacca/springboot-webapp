@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" xmlns:th="www.thymeleaf.org">
+		<title>SpringBoot WebApp application</title>
+	</head>
+	<body>
+		<h1>Authors List</h1>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>LastName</th>
+			</tr>
+			<tr th:each="author: ${authors}">
+				<td th:text="${author.id}"></td>
+				<td th:text="${author.name}"></td>
+				<td th:text="${author.lastName}"></td>
+			</tr>
+		</table>
+	</body>
+</html>
